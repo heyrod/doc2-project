@@ -27,11 +27,11 @@ If you need to configure automatic turnover of instances within the monitoring s
 #### 1. __How can I enable monitoring of a new server?__
 First, you need to complete the prerequisites that are specific for each type of servers. They typically cover firewall or security group configuration, installation of a monitoring agent, and some other steps described in our guides. Then you create a JSON file with monitoring configuration of your server and commit it to this repository from your fork through a pull request. For a more detailed workflow, refer to the instructions for [Adding a new host](https://confluence.wolterskluwer.io/display/GPTH/Adding+new+hosts) in Confluence.
 
-#### 2. __Why I cannot see metrics from the host that I have recently added through OI Self-Service?__
+#### 2. __Why can't I see metrics from the host that I have recently added through OI Self-Service?__
 
 If you cannot see data from your host in Grafana, it may be caused by misconfiguration of the Zabbix agent or JMX interface on the host. For troubleshooting, go to the [Hosts by proxy dashboard in Grafana](https://grafana.wkgpooi.net/d/000000084/zabbix-hosts-by-proxy?orgId=1), select your Zabbix proxy server in the drop-down list, and search for the host name. Check out any interface connection errors reported for the host. To find out the reason of errors, see the description of [Connection errors](https://confluence.wolterskluwer.io/display/GPTH/Connection+errors).
 
-#### 3. __Why I do not receive alerts for the host that I have recently added through OI Self-Service?__
+#### 3. __Why do I not receive alerts for the host that I have recently added through OI Self-Service?__
 If you do not receive alert notifications from the host that you have recently added through OI Self-Service but you can see alerts from the host in Grafana, the reason is that you are not subscribed to notifications.
 This may happen if:
 (a) You have added the host to the group, for which you have no active subscription, or
@@ -41,7 +41,7 @@ This may happen if:
 Go to [Notify](https://notify.wkgpooi.net), check out your active subscriptions, and subscribe to alert notifications if required (see how you can do it in [Subscription Manager](https://confluence.wolterskluwer.io/display/GPTH/Managing+your+subscription).
 
 
-#### 4. __Why I cannot find in Notify the host that I have recently added through OI Self-Service?__
+#### 4. __Why can't I find in Notify the host that I have recently added through OI Self-Service?__
 If you have added a new host to monitoring through OI Self-Service but cannot find it in Notify, you just need to wait more. Notify syncs with Zabbix every 30 minutes and then updates its database. Once the sync is done, you will see the host in Notify and be able to apply silent mode or change the alert subscription details.
 
 #### 5. __What are pseudo-hosts?__
